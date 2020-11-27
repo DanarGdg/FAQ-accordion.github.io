@@ -1,0 +1,222 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Kumbh Sans', sans-serif;
+}
+
+main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.background-faq{
+  background-image:linear-gradient( hsl(273, 75%, 66%) , hsl(240, 73%, 65%));
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-top:3em;/*11.2*/
+}
+
+.border-putih{
+  border-radius:20px;
+  background:white;
+  height: auto;
+  margin: auto;
+  width:80%;
+  display:flex;
+  align-items:  center;
+  box-shadow: 0px 53px 55px -27px rgba(0, 0, 0, 0.41);
+  padding: 1em 0 4em 0;
+
+}
+
+/*    Gambar Kiri di brder putih                        */
+.gambar-parent{
+  float: left;
+  width:50%;
+
+}
+
+.gambar-border-kiri{
+  display:flex;
+  justify-content: center;
+}
+
+.ilustrasi-cewe{
+  transform: translate(-64px , -50px);
+  clip-path: polygon(16% 0, 100% 0, 100% 100%, 16% 100%);
+
+}
+
+.box-gamabr{
+  transform: translate(-100px , -260px);
+  position: absolute;
+}
+
+.bayangan-ilustrasi-cewe{
+  transform:translate(-365px , -300px);
+  clip-path: polygon(52% 0, 100% 0, 100% 100%, 52% 100%);
+  position: absolute;
+}
+/*                     Tulisan dikana                                 */
+.tulisan-faq-kanan{
+  float: right;
+  width:50%;
+  height:100%;
+  user-select:none;
+
+}
+
+.tulisan-faq-kanan h1{
+  margin:30px 0 0px 0;
+  transform:translate(0 , 20px);
+}
+
+.wrap-tulisan-kecil{
+  list-style: none;
+  width:85%;
+  transform:translate(0 , 30px);
+  font-size:14px;
+
+}
+
+
+ul li{
+  margin:0 auto 0;
+  color:hsl(237, 12%, 33%);
+  padding: 1em 0.35em;
+  position:relative;
+}
+
+ul li .list-jawaban{
+  opacity:0;
+  margin-top:0;
+  max-height:0;
+  transition: max-height 100ms linear , opacity 100ms linear, margin 100ms linear;
+}
+
+.list-pertanyaan{
+  margin:0 0 0 0;
+}
+
+ul li::after{
+  content: "";
+  display: block;
+  position:relative;
+  border-bottom:ridge rgb(242, 242, 242 , 0.5) 2px;
+  top:none;
+  left:none;
+  right:none;
+  margin:20px 0 0 0;
+}
+
+.list-pertanyaan:hover{
+  color:hsl(14, 88%, 65%);
+}
+
+.list-pertanyaan img{
+  float:right;
+  transition: transform 100ms linear;
+
+}
+
+ul li.active .list-pertanyaan{
+  font-weight: 700;
+
+}
+
+ul li.active .list-pertanyaan img{
+  transform:rotate(180deg);
+}
+
+ul li.active .list-jawaban{
+  opacity: 1;
+  max-height:20px;
+  margin:10px 0 0 0;
+}
+
+ul li.active ul li::after{
+  margin:auto;
+}
+/*
+/*  --------------------------------------------
+@media only screen and (max-width: 915px){
+  main{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .background-faq{
+    background-image:linear-gradient( hsl(273, 75%, 66%) , hsl(240, 73%, 65%));
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:3em;
+  }
+
+  .border-putih{
+    border-radius:20px;
+    background:white;
+    height: auto;
+    margin: auto;
+    width:90%;
+    display:flex;
+    align-items:  center;
+    box-shadow: 0px 53px 55px -27px rgba(0, 0, 0, 0.41);
+    padding: 1em 0 4em 0;
+
+  }
+
+
+  .tulisan-faq-kanan{
+    width:100%;
+    height:20%;
+    float: none;
+  }
+
+  .wrap-tulisan-kecil{
+    margin: 0 0 0 5%;
+    list-style: none;
+    width:90%;
+    font-size:14px;
+  }
+
+  .tulisan-faq-kanan h1{
+    margin:0px 0 0px 0;
+    text-align: center;
+  }
+
+  .gambar-parent{
+    float: none;
+    width:1%;
+    height:20%;
+  }
+
+  .ilustrasi-cewe{
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    height:200px;
+    width:200px;
+  }
+
+  .box-gamabr{
+    transform: translate(-77px , -30px);
+    height:200px;
+    width:100px;
+    position:absolute;
+
+  }
+
+  .bayangan-ilustrasi-cewe{
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    height:200px;
+    width:100px;
+    position:absolute;
+
+  }
+}
+*/
