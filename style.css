@@ -5,6 +5,14 @@
   font-family:'Kumbh Sans', sans-serif;
 }
 
+#copyright{
+  clear: both;
+  position: absolute;
+  text-align: center;
+  user-select:none;
+  transform: translate(0,450px)
+}
+
 main{
   height: 100vh;
   width: 100vw;
@@ -37,7 +45,7 @@ main{
 .gambar-parent{
   float: left;
   width:50%;
-
+  user-select:none;
 }
 
 .gambar-border-kiri{
